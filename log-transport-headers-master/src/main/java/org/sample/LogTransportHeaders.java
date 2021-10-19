@@ -30,17 +30,17 @@ public class LogTransportHeaders extends AbstractMediator {
             }
 
             log.info("=======================================================");
-            System.out.println("=======================================================");
+//            System.out.println("=======================================================");
 
             for (Object name : headers.keySet()) {
                 String key = name.toString();
                 String value = headers.get(name).toString();
                 log.info(key + " " + value);
-                System.out.println(key + " " + value);
+//                System.out.println(key + " " + value);
             }
 
             log.info("=======================================================");
-            System.out.println("=======================================================");
+//            System.out.println("=======================================================");
 
         } catch (Exception e) {
             log.error("Error while logging TRP Headers", e);
