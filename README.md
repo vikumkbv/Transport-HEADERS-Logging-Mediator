@@ -21,4 +21,4 @@ Example: `loggers = org.sample.LogTransportHeaders`
 
 Use this class mediator as follows wherever needed. then it will log all the transport headers.
 
-<class name="org.sample.LogTransportHeaders"/>
+`<class name="org.sample.LogTransportHeaders"/>`
