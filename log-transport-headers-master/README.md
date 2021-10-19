@@ -1,18 +1,24 @@
-## Log Transport Headers in WSO2 EI
+## Log Transport Headers in WSO2 APIM
 
-This Mediator is used to log all the Transport Headers in WSO2 EI.
-Tested with EI 6.5.0-m6 and ESB 5.0.0 .
+This Mediator is used to log all the Transport Headers in WSO2 APIM.
+
+Tested with APIM 3.2.0 .
 
 ## How to use this?
 
-Place the jar [org.sample.logTransportHeaders-1.0.0.jar](https://github.com/Nirothipan/log-transport-headers/raw/master/target/org.sample.logTransportHeaders-1.0.0.jar) in EI_HOME/lib or ESB_HOME/repository/components/lib
+Place the jar [org.sample.logTransportHeaders-1.0.0.jar](https://github.com/vikumkbv/Transport-HEADERS-Logging-Mediator/raw/master/log-transport-headers-master/target/org.sample.logTransportHeaders-1.0.0.jar) in APIM_HOME/repository/components/lib
 directory.
 
 Add the following config to log4j.properties file to enable INFO level logs for this mediator.
 
-`log4j.logger.org.sample.LogTransportHeaders=INFO`
+`logger.org.sample.LogTransportHeaders.name = org.sample.LogTransportHeaders
+logger.org.sample.LogTransportHeaders.level = INFO`
 
-Use this class mediator as follows wherever needed in you API or Proxy or etc then it will log all the transport 
-headers.
+And also add this to the loggers in log4j.properties file
+`org.sample.LogTransportHeaders`
 
-`<class name="org.sample.LogTransportHeaders"/>`
+Example: `loggers = org.sample.LogTransportHeaders`
+
+Use this class mediator as follows wherever needed. then it will log all the transport headers.
+
+<class name="org.sample.LogTransportHeaders"/>
